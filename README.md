@@ -7,6 +7,7 @@ Static website for The Apex Marketing Group, a content-driven marketing agency f
 - `index.html` - Home page and contact form.
 - `privacy-policy.html` - Public Privacy Policy for website, CRM, and SMS review.
 - `terms-and-conditions.html` - Public Terms & Conditions, including SMS Terms.
+- `_redirects` - Netlify clean URL rewrites for public legal pages.
 
 ## Local Preview
 
@@ -17,6 +18,8 @@ python -m http.server 8080
 ```
 
 Then open `http://localhost:8080`.
+
+The plain Python server previews the direct `.html` files. Netlify applies `_redirects` for the clean legal URLs after deployment.
 
 ## Netlify Deployment
 
@@ -31,6 +34,11 @@ The site should load from the root path after deployment.
 ## Twilio A2P 10DLC Notes
 
 Keep these pages publicly accessible for Twilio A2P 10DLC campaign review and SMS compliance:
+
+- `https://theapexmarketinggroup.com/privacy-policy`
+- `https://theapexmarketinggroup.com/terms-and-conditions`
+
+The direct `.html` paths should also remain accessible:
 
 - `https://theapexmarketinggroup.com/privacy-policy.html`
 - `https://theapexmarketinggroup.com/terms-and-conditions.html`
