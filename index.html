@@ -94,6 +94,21 @@
             justify-content: space-between;
         }
         .nav-logo { display: flex; align-items: center; gap: 10px; }
+        .nav-logo-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            color: #000000;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 1.35rem;
+            font-weight: 900;
+            line-height: 1;
+            flex-shrink: 0;
+        }
         .nav-logo-icon { height: 48px; width: auto; filter: invert(1); }
         .nav-logo-text {
             font-family: 'Inter Tight', sans-serif;
@@ -592,6 +607,37 @@
             color: #666;
             margin-top: 16px;
         }
+        .sms-consent {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px 16px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.025);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .sms-consent input {
+            width: 18px;
+            height: 18px;
+            margin-top: 3px;
+            accent-color: #FFFFFF;
+            flex-shrink: 0;
+        }
+        .sms-consent label {
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 0.82rem;
+            line-height: 1.6;
+            color: #999;
+            letter-spacing: 0;
+            text-transform: none;
+            font-weight: 500;
+        }
+        .sms-consent a {
+            color: #FFFFFF;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
 
         /* ========== FOOTER ========== */
         .footer {
@@ -606,7 +652,40 @@
             text-align: center;
             gap: 16px;
         }
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #FFFFFF;
+        }
         .footer-logo img { height: 40px; width: auto; object-fit: contain; }
+        .footer-logo-mark {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.28);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+        .footer-logo-text {
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-align: left;
+        }
+        .footer-logo-text span {
+            display: block;
+            font-size: 0.5rem;
+            font-weight: 600;
+            color: #888;
+            letter-spacing: 3px;
+            margin-top: -2px;
+        }
         .footer-tagline {
             font-size: 0.85rem;
             color: #666;
@@ -621,6 +700,13 @@
             transition: color 0.3s;
         }
         .footer-copy a:hover { color: #FFFFFF; }
+        .footer-links {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1024px) {
@@ -655,8 +741,8 @@
     <!-- ========== NAV ========== -->
     <nav class="nav" id="nav">
         <div class="container nav-inner">
-            <a href="#" class="nav-logo">
-                <img src="images/avatar-black-on-white-400.png" alt="Apex Marketing Group" class="nav-logo-icon">
+            <a href="index.html" class="nav-logo" aria-label="Apex Marketing Group home">
+                <span class="nav-logo-mark" aria-hidden="true">A</span>
                 <div class="nav-logo-text">APEX<span>MARKETING GROUP</span></div>
             </a>
             <div class="nav-links">
@@ -970,6 +1056,10 @@
                                 <label for="message">Message</label>
                                 <textarea id="message" name="message" placeholder="Tell us about your business and what you're looking for..."></textarea>
                             </div>
+                            <div class="sms-consent">
+                                <input type="checkbox" id="sms-consent" name="sms_consent" value="yes">
+                                <label for="sms-consent">I agree to receive service-related calls and text messages from The Apex Marketing Group about my request. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.</label>
+                            </div>
                         </div>
                         <button type="submit" class="form-submit">Book My Strategy Call</button>
                         <p class="form-note">Free strategy call &middot; No commitments &middot; Honest conversation</p>
@@ -983,11 +1073,12 @@
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container footer-inner">
-            <a href="#" class="footer-logo">
-                <img src="images/apex-logo-white.png" alt="Apex Marketing Group" style="height:50px;width:auto;">
+            <a href="index.html" class="footer-logo" aria-label="Apex Marketing Group home">
+                <span class="footer-logo-mark" aria-hidden="true">A</span>
+                <span class="footer-logo-text">APEX<span>MARKETING GROUP</span></span>
             </a>
             <p class="footer-tagline">Content-Driven Marketing for Local Service Businesses</p>
-            <p class="footer-copy">&copy; 2026 Apex Marketing Group &middot; Northern Colorado &middot; <a href="mailto:nate@theapexmarketinggroup.com">nate@theapexmarketinggroup.com</a> &middot; <a href="/privacy">Privacy Policy</a></p>
+            <p class="footer-copy">&copy; 2026 Apex Marketing Group &middot; Northern Colorado &middot; <a href="mailto:nate@theapexmarketinggroup.com">nate@theapexmarketinggroup.com</a> &middot; <span class="footer-links"><a href="privacy-policy.html">Privacy Policy</a><span aria-hidden="true">&middot;</span><a href="terms-and-conditions.html">Terms &amp; Conditions</a></span></p>
         </div>
     </footer>
 
